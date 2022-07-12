@@ -70,8 +70,8 @@ all: main-build
 main-build: Test_Algorithm.elf secondary-outputs
 
 # Tool invocations
-Test_Algorithm.elf Test_Algorithm.map: $(OBJS) $(USER_OBJS) C:\Users\xzfle\Documents\CubeIDE\Test_Algorithm\STM32F303RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Test_Algorithm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\xzfle\Documents\CubeIDE\Test_Algorithm\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test_Algorithm.map" -Wl,--gc-sections -static -L"C:/Users/xzfle/Documents/CubeIDE/Test_Algorithm\CMSIS\Lib\ARM" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Test_Algorithm.elf Test_Algorithm.map: $(OBJS) $(USER_OBJS) C:\Users\xzFle\Documents\CubeIDE\Test_Algorithm\STM32F303RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Test_Algorithm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\xzFle\Documents\CubeIDE\Test_Algorithm\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Test_Algorithm.map" -Wl,--gc-sections -static -L"C:/Users/xzFle/Documents/CubeIDE/Test_Algorithm\CMSIS\Lib\ARM" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

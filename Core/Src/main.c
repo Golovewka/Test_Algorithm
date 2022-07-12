@@ -15,9 +15,16 @@
  *
  ******************************************************************************
  */
+#include "stm32f303xe.h"
+#include "flash.h"
+#include "clock.h"
 
 int main(void)
 {
+
+	FLASH_init();
+	CLOCK_init();
+	CLOCK_peripheral_init();
 
 	while (1)
 	{
